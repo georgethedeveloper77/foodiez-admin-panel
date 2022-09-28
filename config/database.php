@@ -2,8 +2,7 @@
 
 use Illuminate\Support\Str;
 
-$DATABASE_URL = parse_url('postgres: //wrwjucammjxpzu:62dde95762b0f5804ea8f4ddddd04a2bfaca79f098b449052bbede129bff1a8e@ec2-54-152-28-9.compute-1.amazonaws.com:5432/dar464275ikc08
-');
+$DATABASE_URL = parse_url('postgres://wrwjucammjxpzu:62dde95762b0f5804ea8f4ddddd04a2bfaca79f098b449052bbede129bff1a8e@ec2-54-152-28-9.compute-1.amazonaws.com:5432/dar464275ikc08');
 
 return [
 
@@ -68,11 +67,11 @@ return [
 
         'pgsql' => [
             'driver' => 'pgsql',
-            'host' => $DATABASE_URL["host"],
-            'port' => $DATABASE_URL["port"],
-            'database' => ltrim($DATABASE_URL["path"], "/"),
-            'username' => $DATABASE_URL["user"],
-            'password' => $DATABASE_URL["pass"],
+            'host' => $DATABASE_URL["ec2-54-152-28-9.compute-1.amazonaws.com"],
+            'port' => $DATABASE_URL["5432"],
+            'database' => ltrim($DATABASE_URL["postgres://wrwjucammjxpzu:62dde95762b0f5804ea8f4ddddd04a2bfaca79f098b449052bbede129bff1a8e@ec2-54-152-28-9.compute-1.amazonaws.com:5432/dar464275ikc08"], "/"),
+            'username' => $DATABASE_URL["dar464275ikc08"],
+            'password' => $DATABASE_URL["62dde95762b0f5804ea8f4ddddd04a2bfaca79f098b449052bbede129bff1a8e"],
             'charset' => 'utf8',
             'prefix' => '',
             'schema' => 'public',
